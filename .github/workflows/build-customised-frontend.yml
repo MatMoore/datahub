@@ -45,7 +45,7 @@ jobs:
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: acryldata/datahub-frontend-react
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
